@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+
+
+
+    <div class="card-title mb-3">
+        <h3 class="card-title mb-3">
+            {% if form.instance.pk %}
+            Edit Note
+            {% else %}
+            Create A Note
+            {% endif %}
+        </h3>
+    </div>
+    <form class="p-4 p-md-5 border rounded-3 bg-light" method="post">
+        {% csrf_token %}
+        <div class="form-floating mb-3">
+            {% render_field form.title class="form-control" %}
+            <label for="floatingInput">Note Title</label>
+        </div>
+        <div class="form-floating mb-3">
+            {% render_field form.content class="form-control" %}
+            <label for="floatingInput">Hmm.. Tell us More!</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Save</button>
+        <a href="{% url 'note_list' %}" class="btn btn-primary btn-lg mt-3">Back to List</a>
+    </form>
+    
+
+
+
+
+
+    {% endblock content %}
