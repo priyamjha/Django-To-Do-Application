@@ -22,8 +22,7 @@ A Django web application for taking notes that utilizes local storage for data p
 ### Front-End
 
 - **Templates**: Django templates for rendering HTML.
-- **CSS**: Responsive design using Bootstrap or custom CSS.
-- **Bootstrap**:
+- **CSS & Bootstrap**: Responsive design using Bootstrap or custom CSS.
 
 ## Features
 
